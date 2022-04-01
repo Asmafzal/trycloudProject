@@ -23,7 +23,8 @@ public class DashboardPage {
 
         for (WebElement module : modules) {
             BrowserUtils.hover(module);
-            BrowserUtils.sleep(2);
+           // BrowserUtils.highlight(module); try and see the results this is good for us
+            BrowserUtils.sleep(1);
             moduleTexts.add(module.getText());
         }
         return moduleTexts;
