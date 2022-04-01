@@ -31,8 +31,7 @@ public class DashboardPage {
     }
 
     public void clickModule(String moduleName) {
-        String locator = "//span[.='" + moduleName + "']";
-
+        String locator = "//ul[@id='appmenu']//span[normalize-space(.)='"+moduleName+"']/..";
         Driver.getDriver().findElement(By.xpath(locator)).click();
 
     }

@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be able to access to Contacts module.
 
   Background:
@@ -8,6 +7,7 @@ Feature: As a user, I should be able to access to Contacts module.
   Scenario: As a user, I should be able to access to Talks module
     When user clicks "Talk" module
     Then verify the page title is "Contacts - Trycloud QA"
+
   @us-13
   Scenario: As a user, I should be able to access to Contacts module
     When user clicks "Contacts" module

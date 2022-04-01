@@ -26,8 +26,17 @@ public class LoginStepDefs {
         loginPage.loginButton.click();
     }
 
+    @When("user  log in with valid credentials")
+    public void user_log_in_with_valid_credentials() {
+        new LoginPage().login();
+    }
+
     @Then("user should be at dashboard page")
     public void user_should_be_at_dashboard_page() {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("dashboard"));
+    }
+    @Then("{string} message should be displayed")
+    public void message_should_be_displayed(String expectedMessage) {
+        Assert.assertEquals(expectedMessage, loginPage.warningMessage.getText());
     }
 }
